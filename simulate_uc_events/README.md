@@ -25,7 +25,7 @@ For example, suppose we are interested in chromosomes that (relative to a refere
 0112334
 ```
 
-This profile encodes a chromosome with 2 tandem copies of segment 1, 2 of segment 3, and one copy of the segment in between.  `simulate_uc_events` then tries to generate this profile by crossover events, starting with the reference sequence `01234`.  For example, to use `simulate_uc_events` to generate possible histories of the above profile in two iterations:
+This profile encodes a chromosome with 2 tandem copies of segment 1, 2 of segment 3, and one copy of the segment in between.  (The first and last segments, 0 and 4 in the above, are assumed to be flanking the region where crossover events take place).  `simulate_uc_events` tries to generate this profile by crossover events, starting with the reference sequence `01234`.  For example, to use `simulate_uc_events` to generate possible histories of the above profile in two iterations:
 
 ```
 ./simulate_uc_events "0 1 1 2 3 3 4" 2
