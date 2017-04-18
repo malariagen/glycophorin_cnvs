@@ -1,7 +1,6 @@
 # simulate_uc_events
 
-The program `simulate_uc_events` can be used to find histories of unequal crossover events that give rise to a
-particular target profile.
+The program, `simulate_uc_events` found in this directory, finds histories of unequal crossover events that give rise to a particular target profile.
 
 ## Compilation
 
@@ -14,7 +13,7 @@ g++ -std=c++11 simulate_uc_events simulate_uc_events.cpp
 
 Running `simulate_uc_events` with no arguments gives a brief usage summary.  The general usage is:
 ```
-simulate_uc_events <target profile> <number of generations>
+./simulate_uc_events <target profile> <number of generations>
 ```
 
 `simulate_uc_events` works by attempting to generate a *target* copy number profile using crossover events that occur at predetermined positions (i.e. between predetermined segments), starting from a *reference* chromosome.  The reference chromosome is assumed to contain each segment exactly once; it is always of the form `012345...`.  (Each element in this profile is a single character, and the order is that specified by ASCII.  We recommend using the numeric digits unless more segments are required.)  `simulate_uc_events` works iteratively.  In each iteration, `simulate_uc_events` considers all possible ways to generate new chromosomes from the chromosomes already created.  Then, after a specified number of iterations, `simulate_uc_events` outputs all the chromosomes that match a specified copy number profile.
@@ -29,7 +28,7 @@ For example, suppose we are interested in chromosomes that (relative to a refere
 This profile encodes a chromosome with 2 tandem copies of segment 1, 2 of segment 3, and one copy of the segment in between.  `simulate_uc_events` then tries to generate this profile by crossover events, starting with the reference sequence `01234`.  For example, to use `simulate_uc_events` to generate possible histories of the above profile in two iterations:
 
 ```
-simulate_uc_events "0 1 1 2 3 3 4" 2
+./simulate_uc_events "0 1 1 2 3 3 4" 2
 ```
 The output is:
 ```
