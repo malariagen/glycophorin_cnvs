@@ -59,10 +59,20 @@ This output tells us a few things
 
 The output additionally includes events that appear in possible histories of the matching profiles.
 
-For example, the output tells us that one way to make the target profile `0112334` is via the history
+For example, the output tells us that one way to make the target profile `0112334` is via the history:
 
-| event | left sequence | right sequence | result       |
-| --- | ------------- | -------------- | -------------|
-| 1 | `01:234` | `0:1234` | `011234` |
-| 2 | `01123:4` | `0112:34` | `0112334` |
+*event 1:*  reference chromosome recombines with itself:
+```
+crossover point:   \/
+           left:  01234
+          right:   01234
+         result:  011234
+``` 
 
+*event 2:*  recombined chromosome recombines with itself:
+```
+crossover point:      \/
+           left:  011234
+          right:   011234
+         result:  0112334
+``` 
