@@ -1,7 +1,7 @@
 # simulate_uc_events
 
-The program in th
-
+The program `simulate_uc_events` can be used to find histories of unequal crossover events that give rise to a
+particular target profile.
 
 ## Compilation
 
