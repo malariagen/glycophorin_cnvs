@@ -4,5 +4,5 @@ This repository contains code and example data relating to the article "Resistan
 Two pieces of software are available - 
 
 * Scripts used to call large CNVs across the region, together with example data
-* A C++ program used to perform a simple exhaustive simulation of possible CNV types, given breakpoints.
+* A C++ program used to perform a simple exhaustive simulation of possible CNV types, given breakpoints.  This can be found in the `simulate_uc_events` folder.
 
