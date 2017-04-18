@@ -32,16 +32,17 @@ This profile encodes a chromosome with 2 tandem copies of segment 1, 2 of segmen
 ```
 The output is:
 ```
+./simulate_uc_events "0112334" 2
 # simulate_uc_events
 # Starting sequence is: 01234
 # Target is: 0112334
 # Attempting to make target in 2 generations.
-Computing CNVS in generation 1...
-After generation 1: 13 haplotypes.
-Computing CNVS in generation 2...
-After generation 2: 355 haplotypes.
-# After 3 generations, a total of 355 CNVs are possible.
-#?After 3 generations, a total of 54 histories generate the target copy number profile.
+Computing recombined chromosomes in generation 1...
+After generation 1: 13 chromosomes.
+Computing recombined chromosomes in generation 2...
+After generation 2: 355 chromosomes.
+# After 2 generations, a total of 355 haplotypes are possible.
+# After 2 generations, a total of 54 histories match target copy number profile.
 index	result	generation	left	right	break	copy_number_profile_match	exact_match
 0	0112334	2	01123|4	0112|34	3|3	1	1
 1	0112334	2	01123|4	01212|34	3|3	1	1
