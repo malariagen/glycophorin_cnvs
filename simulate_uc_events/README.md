@@ -63,6 +63,6 @@ For example, the output tells us that one way to make the target profile `011233
 
 | event | left sequence | right sequence | result       |
 | --- | ------------- | -------------- | -------------|
-| 1 | `01|234` | `0|1234` | `011234` |
-| 2 | `01123|4` | `0112|34` | `0112334` |
+| 1 | `01:234` | `0:1234` | `011234` |
+| 2 | `01123:4` | `0112:34` | `0112334` |
 
