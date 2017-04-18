@@ -180,7 +180,7 @@ CNVs generateCNVs(
 	Matcher const& shouldRecordHistory = &everything
 ) {
 	for( std::size_t generation = 1; generation <= nGenerations; ++generation ) {
-		std::cerr << "Computing CNVS in generation " << generation << "...\n" ;
+		std::cerr << "Computing recombined chromosomes in generation " << generation << "...\n" ;
 		CNVs new_cnvs ;
 		std::size_t leftCount = 0 ;
 		for( Iterator i = cnvs.begin(); i != cnvs.end(); ++i, ++leftCount ) {
@@ -205,8 +205,8 @@ CNVs generateCNVs(
 							where->second.second.push_back( r ) ;
 						}
 						if( new_cnvs.size() % 1000000 == 0 ) {
-							std::cerr << "Looked at " << leftCount << " of " << cnvs.size() << " CNVS on left.  " ;
-							std::cerr << "(" << new_cnvs.size() << " CNVs and counting...)" << std::endl ;
+							std::cerr << "Looked at " << leftCount << " of " << cnvs.size() << " chromosomes on left.  " ;
+							std::cerr << "(" << new_cnvs.size() << " chromosomes and counting...)" << std::endl ;
 						}
 					}
 				}
@@ -214,7 +214,7 @@ CNVs generateCNVs(
 		}
 		cnvs.insert( new_cnvs.begin(), new_cnvs.end() ) ;
 		std::cerr << "After generation " << generation << ": "
-			<< cnvs.size() << " haplotypes.\n" ;
+			<< cnvs.size() << " chromosomes.\n" ;
 	}
 
 	return cnvs ;
@@ -291,7 +291,7 @@ int main( int argc, char** argv ) {
 		{
 			std::vector< RecombinationInfo > histories ;
 			getHistoriesThatGenerateProfile( cnvs, sortedTarget, &histories ) ;
-			std::cout << "# After " << generations << " generations, a total of " << cnvs.size() << " CNVs are possible.\n" ;
+			std::cout << "# After " << generations << " generations, a total of " << cnvs.size() << " haplotypes are possible.\n" ;
 			std::cout << "# After " << generations << " generations, a total of " << histories.size() << " histories match target copy number profile.\n" ;
 			std::cout << "index\tresult\tgeneration\tleft\tright\tbreak\tcopy_number_profile_match\texact_match\n" ;
 
